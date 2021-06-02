@@ -22,13 +22,13 @@
    {
     "type": "file",
     "source": "./welcomefile",
-    "destination": "/home/ubuntu"
+    "destination": "/home/ubuntu/3r3"
    },
    {
      "type": "shell",
 	 "inline": [
 	  "ls -al /home/ubuntu",
-	  "cat /home/ubuntu/welcomefile"
+	  "cat /home/ubuntu/3r3/welcomefile"
 	  ]
 		  },
 	{
