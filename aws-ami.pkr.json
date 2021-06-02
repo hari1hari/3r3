@@ -5,7 +5,7 @@
   "region":         "ap-south-1"
   },
  
- "builders": [
+ "builders": {
   {
    "access_key": "{{user 'aws_access_key'}}",
    "ami_image": "packer-linux-aws-demo-{{timestamp}}",
@@ -16,9 +16,9 @@
    "ssh_username": "ubuntu",
    "type": "amazon-ebs"
   }
-  ],
+ },
   
- "provisioners": [
+ "provisioners": {
    {
     "type": "file",
     "source": "./welcomefile",
@@ -26,14 +26,14 @@
    },
    {
      "type": "shell",
-	 "inline": [
+	 "inline": {
 	  "ls -al /home/ubuntu",
 	  "cat /home/ubuntu/3r3/welcomefile"
-	  ]
+	 }
 		  },
 	{
 	 "type": "shell",
 	 "script": "./setup.sh"
 	}
-   ]
+ }
    }
