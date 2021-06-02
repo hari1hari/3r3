@@ -1,11 +1,11 @@
-{
-"variables": {
- "aws_access_key": "{{env 'AWS_ACCESS_KEY_ID'}}",
- "aws_secret_key": "{{env 'AWS_SECRET_ACCESS_KEY'}}",
- "region":         "ap-south-1"
- },
+ "variables": {
+  "aws_access_key": "{{env 'AWS_ACCESS_KEY_ID'}}",
+  "aws_secret_key": "{{env 'AWS_SECRET_ACCESS_KEY'}}",{
+
+  "region":         "ap-south-1"
+  },
  
- "builders": [
+  "builders": [
  {
   "access_key": "{{user 'aws_access_key'}}",
   "ami_image": "packer-linux-aws-demo-{{timestamp}}",
@@ -22,17 +22,18 @@
   {
    "type": "file",
    "source": "./welcomefile",
-   "destination": "/home/ubuntu",
+   "destination": "/home/ubuntu"
    },
    {
     "type": "shell",
 	"inline": [
 	  "ls -al /home/ubuntu",
 	  "cat /home/ubuntu/welcomefile",
+	  ]
 		  },
 	{
 	 "type": "shell",
 	 "script": "./setup.sh'
 	}
-]
-}
+   ]
+   }
