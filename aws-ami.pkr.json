@@ -5,24 +5,24 @@
   "region":         "ap-south-1"
   },
  
- "builders": [
+ "builder": [
   {
    "access_key": "{{user 'aws_access_key'}}",
    "ami_image": "packer-linux-aws-demo-{{timestamp}}",
    "instanace_type": "t2.micro",
    "region": "ap-south-1",
    "secret_key": "{{user 'aws_secret_key'}}",
-   "source_ami": "ami-0d717ca04a4f9a77b",
+   "source_ami": "ami-0edc169ea1afe15b7",
    "ssh_username": "ubuntu",
    "type": "amazon-ebs"
   }
   ],
   
- "provisioners": [
+ "provisioner": [
    {
     "type": "file",
     "source": "./welcomefile",
-    "destination": "/home/ubuntu"
+    "destination": "/home/ubuntu/3r3"
    },
    {
      "type": "shell",
